@@ -4,7 +4,7 @@
 // Topic: free()
 int main() {
     // Allocating memory for 5 integers
-    int* arr = (int*)malloc(5 * sizeof(int));
+    int* arr = malloc(5 * sizeof(int));
     
     if (arr == NULL) {
         printf("Memory allocation failed\n");

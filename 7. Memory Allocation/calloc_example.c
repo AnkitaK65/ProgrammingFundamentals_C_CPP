@@ -4,7 +4,13 @@
 
 int main() {
     // Allocating memory for 5 integers
-    int* ptr = (int*)calloc(5, sizeof(int));
+    int* ptr = calloc(5, sizeof(int));
+    // The calloc (or any malloc family function: malloc, realloc) function returns a void * pointer,
+    //  which is automatically and implicitly converted to any other pointer type in C
+    
+    // In C++, however, an explicit cast like (int *) is required because C++ is stricter about type conversions.
+    // int* ptr = (int*)calloc(5, sizeof(int));
+
 
     // Check if memory allocation was successful
     if (ptr == NULL) {
