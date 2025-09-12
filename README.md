@@ -141,5 +141,15 @@ It contains unit-wise code examples and lab codes, neatly organized for quick le
 - Practice writing simple programs before moving to complex ones.
 - Always test your code with different inputs.
 - Backup your lab programs in GitHub.
+- Windows Command Prompt folder navigation:
+    - cd → Show current directory
+    - dir → List files and folders
+    - cd folder_name → Go inside a folder
+    - cd .. → Go back (up one folder)
+    - cd \ → Go to root of drive
+    - D: → Switch to drive D (or any drive letter)
+    - cd path\to\folder → Go to specific folder.
+        Ex: cd C:\Users\YourName\Documents
+    - start . → Open current folder in File Explorer
 
 ✨ Happy Coding & Learning! 🚀
