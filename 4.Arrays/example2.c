@@ -21,7 +21,7 @@ int main() {
     printf("arr2[2] = %d (auto 0)\n", arr2[2]);
     printf("arr3[3] = %d (all zero)\n", arr3[3]);
     printf("arr4[0] = %d, arr4[3] =%d\n", arr4[0], arr4[3]);
-    printf("arr5 has size = %lu elements\n", sizeof(arr5)/sizeof(arr5[0]));
+    printf("arr5 has size = %d elements\n", sizeof(arr5)/sizeof(arr5[0]));
     printf("arr6[0] = %d, arr6[2] = %d, arr6[3] = %d\n", arr6[0], arr6[2], arr6[3]);
     return 0;
 }

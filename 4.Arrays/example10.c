@@ -34,23 +34,34 @@ int main() {
     printf("Enter a word (no spaces): ");
     scanf("%s", str5);
 
-    // 6. User input with spaces (fgets)
-    char str6[30];
+    // 6. User input with spaces - Not possible with scanf
+    char str6[20];
+    printf("Enter words (with space): ");
+    scanf("%s", str6);
+    // Clear input buffer after scanf
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+
+    // 7. User input with spaces (fgets)
+    char str7[30];
     printf("Enter a sentence (with spaces): ");
     getchar(); // clear leftover newline
-    fgets(str6, sizeof(str6), stdin);
+    fgets(str7, sizeof(str7), stdin);
 
     // ---- Print Results ----
     printf("\n--- String Examples ---\n");
-    printf("str1 = %s (length = %zu)\n", str1, strlen(str1));
-    printf("str2 = %s (length = %lu)\n", str2, strlen(str2));
-    printf("str3 = %s (length = %lu)\n", str3, strlen(str3));
-    printf("str4 = %s (length = %lu)\n", str4, strlen(str4));
-    printf("str5 (scanf, stops at space) = %s\n", str5);
-    printf("str6 (fgets, keeps spaces)  = %s\nProgramming", str6);
     //strlen() returns a value of type size_t (an unsigned integer type).
     // The standard format specifier for size_t is %zu (C99 and later).
     //Many compilers also accept %lu (unsigned long).
+    printf("str1 = %s (length = %zu)\n", str1, strlen(str1));
+    printf("str2 = %s (length = %zu)\n", str2, strlen(str2));
+    printf("str3 = %s (length = %zu)\n", str3, strlen(str3));
+    printf("str4 = %s (length = %lu)\n", str4, strlen(str4));
+    printf("str5 (scanf, stops at space) = %s\n", str5);
+    printf("str6 --> scanf reads only until the first whitespace (space, tab, or newline)  = %s\n", str6);
+    printf("str7 (fgets, keeps spaces)  = %s\n", str7);
+    //fgets reads at most sizeof(str6) - 1 characters, leaving space for the '\0'
+    
 
     return 0;
 }
@@ -70,7 +81,8 @@ str4[7] = -1 (char: �)
 str4[8] = -1 (char: �)
 str4[9] = 15 (char: )
 Enter a word (no spaces): Programming
-Enter a sentence (with spaces): Programming Fundamental using C/C++
+Enter words (with space): Programming Fundamentals
+Enter a sentence (with spaces): Programming Fundamentals using C/C++
 
 --- String Examples ---
 str1 = Hello (length = 5)
@@ -78,5 +90,6 @@ str2 = Hello (length = 5)
 str3 = Hello World (length = 11)
 str4 = Hi (length = 2)
 str5 (scanf, stops at space) = Programming
-str6 (fgets, keeps spaces)  = Programming Fundamental using
+str6 --> scanf reads only until the first whitespace (space, tab, or newline)  = Programming
+str7 (fgets, keeps spaces)  = rogramming Fundamentals using
 */
