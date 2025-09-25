@@ -91,5 +91,5 @@ str3 = Hello World (length = 11)
 str4 = Hi (length = 2)
 str5 (scanf, stops at space) = Programming
 str6 --> scanf reads only until the first whitespace (space, tab, or newline)  = Programming
-str7 (fgets, keeps spaces)  = rogramming Fundamentals using
+str7 (fgets, keeps spaces)  = Programming Fundamentals using
 */
